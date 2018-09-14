@@ -1,10 +1,33 @@
 #!/usr/bin/env python
+""" generated source for module particle """
+from math import floor
+
+
 class PVector(object):
-    def __init__(self, x=None, y=None):
+    """ 2D vector class """
+    def __init__(self, x=0, y=0):
         self.x = x
         self.y = y
 
-""" generated source for module particle """
+    def add(self, vector):
+        self.x += vector.x
+        self.y += vector.y
+        return None
+
+    def mult(self, n):
+        self.x = self.x * n
+        self.y = self.y * n
+        return None
+
+    def div(self, n):
+        self.x = self.x / n
+        self.y = self.y / n
+        return None
+
+    def show(self):
+        return (self.x, self.y)
+
+
 class Particle(object):
     """ generated source for class Particle """
     origin = PVector()
@@ -28,7 +51,7 @@ class Particle(object):
         """ generated source for method move """
         self.origin.add(self.velocity)
         if self.outOfBounds():
-            return
+            return None
         x = floor(map(self.origin.x, 0, width, 0, img.width))
         y = floor(map(self.origin.y, 0, height, 0, img.height))
         c = img.pixels[y * img.width + x]

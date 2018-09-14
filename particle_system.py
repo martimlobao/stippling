@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 """ generated source for module particle_system """
+from math import floor
+from particle import Particle
+
+
 class ParticleSystem(object):
     """ generated source for class ParticleSystem """
     cells = []

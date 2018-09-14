@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-from particle import *
-from particle_system import *
-
 """ generated source for module particle_cell """
+from particle import PVector
+from particle_system import ParticleSystem
+
+
 class Cell(object):
     """ generated source for class Cell """
     sys = ParticleSystem()
